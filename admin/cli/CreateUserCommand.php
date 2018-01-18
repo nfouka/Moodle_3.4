@@ -63,7 +63,7 @@ class CreateUserCommand extends Command
         global $CFG, $DB;
 
         $record1 = new stdClass();
-        for($i=0 ; $i < 10000; $i++) {
+        for($i=0 ; $i < 100; $i++) {
 
             $record1->name = 'overview' . rand(0, 98898);
             $record1->displayorder = '10000' . rand(0, 98898);
