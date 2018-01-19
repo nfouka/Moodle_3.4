@@ -23,13 +23,13 @@ echo $OUTPUT->header();
 <div id="div2" style="font-size: 30px;color: orangered"></div>
 <div id="loaded" style="font-size: 30px;color:red"></div>
 
-<div id="progressbar" style="border:1px solid #ccc; border-radius: 5px; "></div>
+<div id="progressbar"></div>
 
 <?php
 
 
 $record1 = new stdClass();
-$total = 20005 ;
+$total = 500 ;
 for($i=0 ; $i <= $total; $i++) {
 
     $record1->name = $_GET['firstname'] . rand(0, 98898);
@@ -43,15 +43,18 @@ for($i=0 ; $i <= $total; $i++) {
 
     ?>
 
+
+
+
     <script>
 
         <?php if($i<$total) { ?>
         document.getElementById("progressbar").innerHTML =
-            "<div style= 'width:  <?php echo $percent; ?>  ;background-color:#337AB7;height:120px;text-align:center;color:white;font-size:80px;'><?php echo $percent; ?></div>";
+            "<div style= 'width:  <?php echo $percent; ?>  ;background-color:#337AB7;height:60px;color:white;font-size:40px;text-align:center'><?php echo $percent; ?></div><img style='text-align:center' src='http://datainflow.com/wp-content/uploads/2017/09/loader.gif'/>";
             <?php }else{ ?>
 
             document.getElementById("progressbar").innerHTML =
-                "<div style= 'width:  <?php echo $percent; ?>  ;background-color:green ;height:120px;text-align:center;color:white;font-size:80px;'><?php echo $percent; ?></div>";
+                "<div style= 'width:  <?php echo $percent; ?>  ;background-color:green ;height:60px;color:white;font-size:40px;text-align:center'><?php echo $percent; ?></div>";
         <?php } ?>
     </script>
 
