@@ -83,6 +83,6 @@ class CreateUserCommand extends Command
         print_r($count) ;
     }
 }
-$app = new \Symfony\Component\Console\Application() ;
+$app = new \Symfony\Component\Console\Application("Command Line Generator for LMS Numeric Univ by nfouka@gmail.com." , '1.0.0') ;
 $app->add(new CreateUserCommand()) ;
 $app->run() ;
