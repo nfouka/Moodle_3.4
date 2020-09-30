@@ -66,7 +66,7 @@ function core_competency_comment_add($comment, $params) {
 
         // Get the competency.
         $competency = $uc->get_competency();
-        $competencyname = format_string($competency->get('shortname'), true, array('context' => $competency->get_context()));
+        $competencyname = format_string($competency->get('shortname'), false, array('context' => $competency->get_context()));
 
         // We want to send a message for one plan, trying to find an active one first, or the last modified one.
         $plan = null;
