@@ -36,7 +36,7 @@ class core_rss_renderer extends plugin_renderer_base {
      */
     public function user_reset_rss_token_confirmation() {
         global $OUTPUT, $CFG;
-        $managetokenurl = $CFG->wwwroot."/user/managetoken.php?sesskey=" . sesskey();
+        $managetokenurl = $CFG->wwwroot."/user/managetoken.php?token=" . sesskey();
         $optionsyes = array('action' => 'resetrsstoken', 'confirm' => 1, 'sesskey' => sesskey());
         $optionsno  = array('section' => 'webservicetokens', 'sesskey' => sesskey());
         $formcontinue = new single_button(new moodle_url($managetokenurl, $optionsyes), get_string('reset'));
